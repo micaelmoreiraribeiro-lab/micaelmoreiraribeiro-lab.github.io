@@ -2,9 +2,9 @@
    Micael Ribeiro · Portfólio — paleta "Película"
    Papel domina, grafite em blocos inteiros, âmbar só como acento.
    ========================================================= */
-@font-face{font-family:"Archivo";src:url(assets/fonts/archivo-latin-wdth-normal.woff2) format("woff2");font-weight:100 900;font-stretch:62% 125%;font-display:swap}
-@font-face{font-family:"Instrument Serif";src:url(assets/fonts/instrument-serif-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"Instrument Serif";src:url(assets/fonts/instrument-serif-latin-400-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Archivo";src:url(archivo-latin-wdth-normal.woff2) format("woff2");font-weight:100 900;font-stretch:62% 125%;font-display:swap}
+@font-face{font-family:"Instrument Serif";src:url(instrument-serif-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Instrument Serif";src:url(instrument-serif-latin-400-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
 
 :root{
   --paper:#EFE9DC; --paper-2:#E6DECD; --paper-3:#DCD2BE;
