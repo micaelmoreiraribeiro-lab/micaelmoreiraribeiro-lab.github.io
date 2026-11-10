@@ -7,9 +7,9 @@
 <meta name="description" content="Case GP Atacado: estratégia, design system, nova comunicação e ferramentas internas feitas com IA para um atacado de bebidas em Brasília.">
 <meta name="theme-color" content="#1B1B1B">
 <link rel="preload" href="archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=20261110b">
-<script src="i18n.js?v=20261110b" defer></script>
-<script src="main.js?v=20261110b" defer></script>
+<link rel="stylesheet" href="style.css?v=20261110d">
+<script src="i18n.js?v=20261110d" defer></script>
+<script src="main.js?v=20261110d" defer></script>
 </head>
 <body class="gp-case">
 <a class="skip" href="#main" data-i="skip">Pular para o conteúdo</a>
@@ -39,6 +39,11 @@
         <div>
           <h1 class="display" id="case-title">GP<br><span class="c">Atacado</span></h1>
           <p class="lead" data-i="gp_tag">Um atacado de bebidas, três tipos de usuário e uma empresa redesenhada por dentro.</p>
+          <a class="result-hl" href="#s1" aria-label="Resultado: vendas 20% maiores em 2026 do que em 2025. Veja como chegamos lá.">
+            <b>+<span class="cnt" data-to="20">20</span>%</b>
+            <span class="rl"><strong data-i="gp_res_l">de vendas a mais em 2026 do que em 2025</strong><em data-i="gp_res_q">O que mudou para chegar aí? Veja o case</em></span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 4v15M6 13l6 6 6-6"/></svg>
+          </a>
           <p data-i="gp_intro" class="prose mute" style="margin-top:22px">Estou na GP Atacado desde o começo, ao lado do dono. A partir de fevereiro de 2025, com a formação em UX, passei a tratar os problemas do dia a dia como problemas de experiência e a liderar as mudanças: na marca, na conversa com o cliente e nos controles internos.</p>
         </div>
         <div class="phone" aria-hidden="true"><span class="notch"></span><div class="screen"><img src="cmp-depois.jpg" width="720" height="1180" alt=""></div></div>
@@ -202,14 +207,28 @@
 
     <div class="wrap" id="cards" style="margin-top:clamp(72px,9vw,136px)">
       <div class="logo-block">
-      <div class="head" style="margin-bottom:clamp(28px,4vw,48px)">
-        <h3 class="h2" style="font-size:clamp(36px,4.4vw,68px)" data-i="a4l">Logo antes e depois</h3>
-        <p class="prose" data-i="a4lp">O logo foi redesenhado e virou o ponto de partida do resto do sistema.</p>
-      </div>
-      <div class="logo-compare">
-        <figure class="fig"><img src="logo-antigo.jpg" width="900" height="900" alt="Logo antigo da GP Atacado, branco sobre azul, com as letras GP, a palavra ATACADO e um caminhão." data-i-alt="logo_old_alt" loading="lazy"><figcaption><b data-i="sy0o">Logo antigo.</b></figcaption></figure>
-        <figure class="fig"><img src="card-logo.jpg" width="900" height="900" alt="Logo modernizado da GP Atacado em branco sobre azul." data-i-alt="logo_alt" loading="lazy"><figcaption data-i="sy0">Logo modernizado.</figcaption></figure>
-      </div>
+        <div class="compare-wrap">
+          <div>
+            <h3 class="h3" data-i="a4l">Logo antes e depois</h3>
+            <p class="prose" style="margin-top:14px" data-i="a4lp">O logo foi redesenhado e virou o ponto de partida do resto do sistema.</p>
+            <dl class="ps" style="margin-top:18px">
+              <div><dt data-i="ps_p">Antes</dt><dd data-i="lg_b">Três blocos empilhados: sigla, nome e um caminhão detalhado, cada um disputando atenção.</dd></div>
+              <div><dt data-i="ps_s">Depois</dt><dd data-i="lg_a">Uma assinatura horizontal: sigla redesenhada, caminhão simples com traços de velocidade e o nome espaçado embaixo.</dd></div>
+            </dl>
+            <p class="cap" data-i="lg_hint">Arraste o controle (ou use as setas do teclado) para comparar.</p>
+          </div>
+          <div class="compare sq">
+            <div class="screen">
+              <div class="layer"><img src="logo-antigo.jpg" width="900" height="900" alt="Logo antigo da GP Atacado, branco sobre azul, com as letras GP, a palavra ATACADO e um caminhão." data-i-alt="logo_old_alt" loading="lazy"></div>
+              <div class="layer layer-after"><img src="card-logo.jpg" width="900" height="900" alt="Logo modernizado da GP Atacado em branco sobre azul." data-i-alt="logo_alt" loading="lazy"></div>
+              <span class="lbl l"><span class="tag" data-i="before">Antes</span></span>
+              <span class="lbl r"><span class="tag after" data-i="after">Depois</span></span>
+              <span class="handle" aria-hidden="true"></span>
+              <label class="sr" for="cmp-logo" data-i="lg_lbl">Comparar logo antes e depois</label>
+              <input id="cmp-logo" type="range" min="0" max="100" value="50">
+            </div>
+          </div>
+        </div>
       </div>
       <div class="cards-block">
       <div class="head" style="margin-bottom:clamp(28px,4vw,48px)">

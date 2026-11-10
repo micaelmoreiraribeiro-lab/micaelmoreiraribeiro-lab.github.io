@@ -740,3 +740,37 @@ body.leaving{opacity:0;transition:opacity .25s}
 .logo-block{padding-bottom:clamp(64px,8vw,120px);margin-bottom:clamp(64px,8vw,120px);border-bottom:1px solid rgba(27,27,27,.18)}
 .logo-compare{max-width:none;grid-template-columns:repeat(2,minmax(0,420px));gap:clamp(16px,2.4vw,36px)}
 @media (max-width:640px){.logo-compare{grid-template-columns:1fr}}
+
+/* texto "como trabalho" mais longo: tamanho confortável */
+.how>.lead{font-size:clamp(20px,2.1vw,30px);line-height:1.35;max-width:46em}
+
+/* hover: luz que segue o mouse + números que sobem sobre a capa */
+.feature .poster::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .4s;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.22),transparent 60%);mix-blend-mode:soft-light;z-index:2}
+.feature:hover .poster::after{opacity:1}
+.feature .hov{position:absolute;left:0;right:0;bottom:0;z-index:3;display:flex;gap:clamp(20px,3vw,44px);padding:clamp(40px,6vw,72px) clamp(18px,2.4vw,30px) clamp(16px,2vw,26px);background:linear-gradient(to top,rgba(10,10,10,.82),rgba(10,10,10,0));color:var(--paper);transform:translateY(100%);opacity:0;transition:transform .55s var(--ease,ease),opacity .45s}
+.feature:hover .hov,.feature:focus-visible .hov{transform:none;opacity:1}
+.feature .hov span{display:flex;flex-direction:column;gap:2px;transform:translateY(14px);transition:transform .6s var(--ease,ease)}
+.feature:hover .hov span{transform:none}
+.feature:hover .hov span:nth-child(2){transition-delay:.08s}
+.feature .hov b{font-family:var(--display);font-weight:850;font-stretch:66%;font-size:clamp(34px,4vw,56px);line-height:.9;color:var(--amber-soft)}
+.feature .hov i{font-style:normal;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#E8E2D3}
+@media (hover:none){.feature .hov,.feature .poster::after{display:none}}
+@media (prefers-reduced-motion:reduce){.feature .hov,.feature .hov span{transition:none}}
+
+/* resultado em destaque na abertura do case da GP */
+.result-hl{display:flex;align-items:center;gap:clamp(14px,2.4vw,28px);margin:30px 0 6px;padding:clamp(14px,2vw,22px) clamp(18px,2.6vw,30px);border:1px solid rgba(242,196,107,.45);border-radius:18px;background:linear-gradient(120deg,rgba(217,142,4,.16),rgba(217,142,4,.04));color:var(--paper);text-decoration:none;max-width:640px;transition:transform .4s var(--ease,ease),border-color .3s,background .3s}
+.result-hl:hover{transform:translateY(-3px);border-color:var(--amber-soft);background:linear-gradient(120deg,rgba(217,142,4,.26),rgba(217,142,4,.08))}
+.result-hl b{font-family:var(--display);font-weight:850;font-stretch:66%;font-size:clamp(64px,9vw,128px);line-height:.82;color:var(--amber-soft);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.result-hl .rl{display:flex;flex-direction:column;gap:6px;min-width:0}
+.result-hl strong{font-family:var(--display);font-weight:700;font-size:clamp(16px,1.6vw,20px);line-height:1.25}
+.result-hl em{font-family:var(--serif);font-style:italic;font-size:clamp(16px,1.5vw,19px);color:var(--mute-d)}
+.result-hl svg{flex:none;width:28px;height:28px;margin-left:auto;color:var(--amber-soft);animation:hlbob 1.8s ease-in-out infinite}
+@keyframes hlbob{0%,100%{transform:translateY(-3px)}50%{transform:translateY(5px)}}
+@media (prefers-reduced-motion:reduce){.result-hl svg{animation:none}}
+@media (max-width:520px){.result-hl{flex-wrap:wrap}.result-hl svg{display:none}}
+
+/* comparador do logo: mesmo controle do feed, sem moldura de celular */
+.compare.sq{width:min(100%,520px);margin-inline:auto;border-radius:14px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.45)}
+.compare.sq .layer img{aspect-ratio:1/1}
+.compare.sq .lbl{top:16px}
+.logo-block .compare-wrap{align-items:center}
