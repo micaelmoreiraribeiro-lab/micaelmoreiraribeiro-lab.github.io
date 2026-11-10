@@ -735,3 +735,8 @@ body.leaving{opacity:0;transition:opacity .25s}
 /* menos distância entre o último case e o contato */
 #explorar.band{padding-bottom:clamp(20px,3vw,44px)}
 .end#contato{padding-top:clamp(28px,4vw,56px)}
+
+/* logo e cards em blocos separados */
+.logo-block{padding-bottom:clamp(64px,8vw,120px);margin-bottom:clamp(64px,8vw,120px);border-bottom:1px solid rgba(27,27,27,.18)}
+.logo-compare{max-width:none;grid-template-columns:repeat(2,minmax(0,420px));gap:clamp(16px,2.4vw,36px)}
+@media (max-width:640px){.logo-compare{grid-template-columns:1fr}}
